@@ -1,0 +1,72 @@
+
+p, h1, h2, h3, h4 {
+  font-family: sans-serif;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+body {
+  padding: 0 20px;
+}
+
+header {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+#quotes {
+  margin-bottom: 30px;
+}
+
+.quote-container {
+  margin: 10px 0px;
+  padding: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.quote-container h3 {
+  margin: 0;
+}
+
+.quote-container p {
+  margin-top: 7px;
+}
+
+button {
+  border-radius: 0;
+  color: white;
+  box-shadow: 0;
+  border: 0;
+}
+
+button.reveal {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 8px;
+}
+
+button.more {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 12px;
+}
+
+button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+button.reveal:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.quote-source {
+  display: none;
+}
