@@ -44,13 +44,18 @@
           var $p = $("<p>" + quote.content + "</p>");
           $quoteContainer.append($h3);
           $quoteContainer.append($p);
-          $quoteContainer.css("display", "none");
-          $("#quotes").append($quoteContainer);
-          $("#quotes .quote-container:last-child").slideDown();
+          $quoteContainer.css('display', 'none');
+          $('#quotes').append($quoteContainer);
+          $('#quotes .quote-container:last-child').slideDown();
         },
         cache: false
       });
     }
   };
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Run App
+  //////////////////////////////////////////////////////////////////////////////
+  app.initialize();
 
 })();

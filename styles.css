@@ -3,6 +3,10 @@ p, h1, h2, h3, h4 {
   font-family: sans-serif;
 }
 
+p {
+  font-size: 0.85em;
+}
+
 h4 {
   margin: 0;
   padding: 0;
@@ -17,6 +21,18 @@ header {
   border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .left-col {
+
+}
+
+header .right-col {
+
 }
 
 header h1 {
@@ -54,8 +70,10 @@ button.reveal {
 }
 
 button.more {
+  text-transform: uppercase;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 12px;
+  padding: 30px 100px;
 }
 
 button:hover {
