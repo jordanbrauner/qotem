@@ -1,11 +1,6 @@
-
-p, h1, h2, h3, h4 {
-  font-family: sans-serif;
-}
-
-p {
-  font-size: 0.85em;
-}
+/****************************************************************
+CORE
+****************************************************************/
 
 h4 {
   margin: 0;
@@ -17,44 +12,64 @@ body {
   padding: 0 20px;
 }
 
+body {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/****************************************************************
+HEADER
+****************************************************************/
+
 header {
+  padding: 20px 0 20px 0;
+  margin-bottom: 30px;
   border-bottom: 1px solid lightgray;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
 
-header .left-col {
-
+#logo {
+  font: normal normal 700 2.5em/1.25em 'Baloo Paaji';
+  margin: 0 0 0 0;
 }
 
-header .right-col {
-
+#tagline {
+  margin: 0.1em 0 0 0;
+  font: italic normal 300 0.85em/1.25em 'Raleway';
 }
 
-header h1 {
-  margin-bottom: 0;
-}
+/****************************************************************
+QUOTES
+****************************************************************/
 
 #quotes {
+  height: 70vh;
+  overflow-y: scroll;
   margin-bottom: 30px;
 }
 
 .quote-container {
-  margin: 10px 0px;
-  padding: 20px 20px;
+  box-sizing: content-box;
+  width: 65%;
+  min-width: 800px;
+  margin: 0 0 25px 0;
+  padding: 45px 90px 45px 30px;
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.quote-container h3 {
-  margin: 0;
+.quote-content p {
+  font: normal normal normal 1.25em/1.25em 'Raleway';
+  margin: 0 0 20px 0;
 }
 
-.quote-container p {
-  margin-top: 7px;
+.quote-title {
+  font: normal normal bold 0.75em/1em 'Raleway';
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
 }
 
 button {
@@ -64,27 +79,43 @@ button {
   border: 0;
 }
 
-button.reveal {
-  background-color: rgba(0, 0, 0, 0.35);
-  padding: 8px;
+button:focus {
+  outline: 0;
 }
 
-button.more {
+button.generate {
+  font: normal normal bold 0.9em 'Raleway';
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 100px;
+  padding: 30px 70px;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
 }
 
 button:hover {
   background-color: black;
-  cursor: pointer;
 }
 
-button.reveal:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+
+/****************************************************************
+FOOTER
+****************************************************************/
+
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
-.quote-source {
-  display: none;
+footer a, footer p {
+  font: normal normal bold 10px/1em 'Raleway';
+  letter-spacing: 0.075em;
+  color: rgba(0, 0, 0, 0.75);
+  text-transform: uppercase;
+  text-decoration: none;
 }
