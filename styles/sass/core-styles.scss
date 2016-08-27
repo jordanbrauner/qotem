@@ -1,0 +1,92 @@
+@import "import-styles.scss";
+
+/****************************************************************
+NORMALIZE
+****************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 20px;
+  min-width: 700px;
+  min-height: 700px;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/****************************************************************
+HEADER
+****************************************************************/
+
+header {
+  padding: 20px 0 20px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  @include user-select(none);
+}
+
+#logo {
+  font: normal normal 700 2.5em/1.25em $logoFont;
+  margin: 0 0 0 0;
+  cursor: default;
+}
+
+#tagline {
+  margin: 0.1em 0 0 0;
+  font: italic normal 300 0.85em/1.25em $mainFont;
+  cursor: default;
+}
+
+/* Generate Quote Button */
+button {
+  border-radius: 0;
+  color: white;
+  box-shadow: 0;
+  border: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button.generate {
+  font: normal normal bold 0.8em $mainFont;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 45px;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+}
+
+/****************************************************************
+FOOTER
+****************************************************************/
+
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+footer a, footer p {
+  font: normal normal bold 0.65em/0.5em $mainFont;
+  letter-spacing: 0.025em;
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}

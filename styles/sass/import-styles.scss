@@ -1,0 +1,76 @@
+/*****************************
+Fonts
+*****************************/
+
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji|Raleway:400,400i,700,700i';
+
+/*****************************
+Mixins
+*****************************/
+
+@mixin user-select($none) {
+  -webkit-user-select: $none;
+     -moz-user-select: $none;
+      -ms-user-select: $none;
+          user-select: $none;
+}
+
+@mixin backface-visibility($hidden) {
+  -webkit-backface-visibility: $hidden;
+          backface-visibility: $hidden;
+}
+
+@mixin transform-translate($x, $y) {
+ 	-webkit-transform: translate($x, $y); /* Safari */
+      -ms-transform: translate($x, $y); /* IE 9 */
+          transform: translate($x, $y);
+}
+
+@mixin transform-scale($amount) {
+ 	-webkit-transform: scale($amount); /* Safari */
+      -ms-transform: scale($amount); /* IE 9 */
+          transform: scale($amount);
+}
+
+@mixin transform-scaleY($amount) {
+ 	-webkit-transform: scaleY($amount); /* Safari */
+      -ms-transform: scaleY($amount); /* IE 9 */
+          transform: scaleY($amount);
+}
+
+@mixin transform-rotateX($amount) {
+ 	-webkit-transform: rotateX($amount); /* Safari */
+      -ms-transform: rotateX($amount); /* IE 9 */
+          transform: rotateX($amount);
+}
+
+@mixin transform-rotateY($amount) {
+ 	-webkit-transform: rotateY($amount); /* Safari */
+      -ms-transform: rotateY($amount); /* IE 9 */
+          transform: rotateY($amount);
+}
+@mixin transform-rotateZ($amount) {
+ 	-webkit-transform: rotateZ($amount); /* Safari */
+      -ms-transform: rotateZ($amount); /* IE 9 */
+          transform: rotateZ($amount);
+}
+
+@mixin transform-rotate3D($x, $y, $z, $a) {
+  -webkit-transform: rotate3D($x, $y, $z, $a);
+      -ms-transform: rotate3D($x, $y, $z, $a);
+          transform: rotate3D($x, $y, $z, $a);
+}
+
+/*****************************
+Variables
+*****************************/
+
+// Colors
+$cardBackgroundColor: rgba(0, 0, 0, 0.05);
+
+// Structure
+// Margin
+
+// Fonts
+$logoFont: 'Baloo Paaji', sans-serif;
+$mainFont: 'Raleway', sans-serif;
