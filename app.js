@@ -16,13 +16,12 @@
     listeners: function() {
 
       var genCount = 1;
-      var MAX_QUOTES = 5;
+      var MAX_QUOTES = 7;
 
       $('button.generate').on('click', function(e) {
         e.preventDefault();
         if (genCount < MAX_QUOTES) {
           genCount += 1;
-          console.log(genCount);
           quotes.generateQuote('not-maxed');
         } else {
           quotes.generateQuote('maxed');
@@ -46,10 +45,24 @@
 
           var quote = data.shift();
           var $quoteContainer = $("<div class='quote-container'></div>");
+          // Left column
+          var $leftCol = $("<div class='left-col'></div>");
+          var $quote = $('<p class="quote-marks">"</p>');
+          $leftCol.append($quote);
+          $quoteContainer.append($leftCol);
+          // Right Column
+          var $rightCol = $("<div class='right-col'></div>");
           var $content = $("<div class='quote-content'>" + quote.content + "</div>");
-          var $title = $("<div class='quote-title'>" + quote.title + "</div>");
-          $quoteContainer.append($content);
-          $quoteContainer.append($title);
+          var $author = $("<div class='quote-author'>" + quote.title + "</div>");
+          $rightCol.append($content);
+          $rightCol.append($author);
+          $quoteContainer.append($rightCol);
+          // Overlay
+          var $overlayCol = $("<div class='overlay-col'></div>");
+          var $overlay = $("<p>Share</p>");
+          $overlayCol.append($overlay);
+          $quoteContainer.append($overlayCol);
+          // Main
           $quoteContainer.css('display', 'none');
 
           if (type === "not-maxed") {

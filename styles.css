@@ -2,17 +2,15 @@
 CORE
 ****************************************************************/
 
-h4 {
+* {
   margin: 0;
   padding: 0;
-  margin-top: 20px;
 }
 
 body {
   padding: 0 20px;
-}
-
-body {
+  min-width: 700px;
+  min-height: 700px;
   height: 100vh;
   overflow-y: hidden;
 }
@@ -29,49 +27,25 @@ header {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #logo {
   font: normal normal 700 2.5em/1.25em 'Baloo Paaji';
   margin: 0 0 0 0;
+  cursor: default;
 }
 
 #tagline {
   margin: 0.1em 0 0 0;
   font: italic normal 300 0.85em/1.25em 'Raleway';
+  cursor: default;
 }
 
-/****************************************************************
-QUOTES
-****************************************************************/
-
-#quotes {
-  height: 70vh;
-  overflow-y: scroll;
-  margin-bottom: 30px;
-}
-
-.quote-container {
-  box-sizing: content-box;
-  width: 65%;
-  min-width: 800px;
-  margin: 0 0 25px 0;
-  padding: 45px 90px 45px 30px;
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.quote-content p {
-  font: normal normal normal 1.25em/1.25em 'Raleway';
-  margin: 0 0 20px 0;
-}
-
-.quote-title {
-  font: normal normal bold 0.75em/1em 'Raleway';
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin: 10px 0 0 0;
-}
-
+/* Generate Quote Button */
 button {
   border-radius: 0;
   color: white;
@@ -84,18 +58,113 @@ button:focus {
 }
 
 button.generate {
-  font: normal normal bold 0.9em 'Raleway';
+  font: normal normal bold 0.8em 'Raleway';
   letter-spacing: 0.05em;
   text-transform: uppercase;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 70px;
+  padding: 20px 45px;
   transition: all 0.15s ease-out;
   cursor: pointer;
 }
 
 button:hover {
   background-color: black;
+}
+
+/****************************************************************
+QUOTES
+****************************************************************/
+
+section#quotes {
+  height: 70vh;
+  overflow-y: scroll;
+  margin-bottom: 30px;
+}
+
+.quote-container {
+  width: 100%;
+  min-width: 800px;
+  margin: 0 0 25px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: default;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.15s ease;
+}
+
+.quote-container:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+/* Left Column */
+.quote-container .left-col {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 44px;
+  width: 7%;
+  height: 30px;
+  overflow-y: hidden;
+  margin: 35px 0px 35px 0px;
+  padding: 0;
+}
+
+.quote-container .quote-marks {
+  font: normal normal bold 5em 'Raleway';
+  position: relative;
+  top: -12px;
+  margin: 0;
+}
+
+/* Right Column */
+.quote-container .right-col {
+  width: 93%;
+  margin: 35px 160px 35px 0px;
+  padding-left: 0.5em;
+}
+
+.quote-container .right-col .quote-content p, .quote-container .right-col .quote-content li {
+  font: normal normal normal 1.25em/1.25em 'Raleway';
+  margin: 0 0 20px 0;
+}
+
+.quote-author {
+  font: normal normal bold 0.75em/1em 'Raleway';
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+}
+
+/* Overlay */
+
+.overlay-col {
+  width: 120px;
+  height: 100%;
+  position: absolute;
+  right: -120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rebeccapurple;
+  transition: right 0.25s ease;
+}
+
+.overlay-col:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.overlay-col p {
+  font: normal normal normal 1em/1.25em 'Raleway';
+  color: white;
+}
+
+.quote-container:hover .overlay-col {
+  right: 0;
 }
 
 
@@ -113,9 +182,8 @@ footer {
 }
 
 footer a, footer p {
-  font: normal normal bold 10px/1em 'Raleway';
-  letter-spacing: 0.075em;
+  font: normal normal bold 0.65em/0.5em 'Raleway';
+  letter-spacing: 0.025em;
   color: rgba(0, 0, 0, 0.75);
-  text-transform: uppercase;
   text-decoration: none;
 }
